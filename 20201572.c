@@ -134,29 +134,18 @@ void CreateLine(int row) {
 			CellIndex++;
 		}
 	}
-	for (i = 0; i < row - 1; i++) {                //Deals with RowConnect
-		if (MazeRow[i] == MazeRow[i + 1]) {        //if two cells have same index
-			RowConnect[i] = FALSE;
-		}
-	}
 	for (i = 0; i < row - 1; i++) {
 		RowConnect[i] = FALSE;
-		if (MazeRow[i] != MazeRow[i + 1]) {
-			RowConnect[i] = FALSE;              //if different index, randomly connect
+		if (MazeRow[i] != MazeRow[i + 1]) {       //if different index, randomly connect
 			if (RandBool()) {
 				int tmp = MazeRow[i + 1];
 				MazeRow[i + 1] = MazeRow[i];      //Randomly merge two cells
-				for (j = 0; j < row; j++) {
+				for (j = 0; j < row; j++) {	      //and update same indexed cells
 					if (MazeRow[j] == tmp)
 						MazeRow[j] = MazeRow[i];
 				}
 				RowConnect[i] = TRUE;
 			}
-		}
-	}
-	for (i = 0; i < row - 1; i++) {
-		if (RowConnect[i]) {
-			MazeRow[i + 1] = MazeRow[i];
 		}
 	}
 	/////
@@ -201,19 +190,13 @@ void EndMaze(int row) {
 		else {
 			RowConnect[i] = TRUE;
 			int tmp = MazeRow[i + 1];
-			MazeRow[i + 1] = MazeRow[i];      
+			MazeRow[i + 1] = MazeRow[i];           //if two different cells merge, update index
 			for (j = 0; j < row; j++) {
 				if (MazeRow[j] == tmp)
 					MazeRow[j] = MazeRow[i];
 			}
 		}
 	}
-	/*for (i = 0; i < row - 1; i++) {
-		if (MazeRow[i] != MazeRow[i + 1]) {        //If different index, merge
-			MazeRow[i + 1] = MazeRow[i];
-			RowConnect[i] = TRUE;
-		}
-	}*/
 }
 
 int RandBool() {
