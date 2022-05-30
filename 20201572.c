@@ -60,11 +60,13 @@ void DrawWall(int row, FILE** fp){
 void DrawRow(int row, FILE** fp){
     fprintf(*fp, "|");
     for (int i = 0; i < row-1; i++){
+        //fprintf(*fp, "%d", MazeRow[i]);               debugging
         fprintf(*fp, " ");                              //Print one cell of maze
         if (RowConnect[i])
             fprintf(*fp, " ");                          //If cell is connected
         else fprintf(*fp, "|");
     }
+    //fprintf(*fp, "%d|\n", MazeRow[row-1]);            debugging
     fprintf(*fp, " |\n");
 }
 
@@ -144,7 +146,7 @@ void CreateLine(int row){
             }
         }
         else{
-            RowConnect[i] = TRUE;               //if same index, connect
+            RowConnect[i] = FALSE;              //if same index, do not connect
         }
     }
     /////
