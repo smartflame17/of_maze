@@ -1,0 +1,26 @@
+﻿  main.cpp
+  ofApp.cpp
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+C:\Users\jason\Documents\openframeworks_v0.11.2\libs\openFrameworks\utils\ofUtils.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\main.cpp)
+C:\Users\jason\Documents\openframeworks_v0.11.2\libs\openFrameworks\utils\ofUtils.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\ofApp.cpp)
+C:\Users\jason\Documents\openframeworks_v0.11.2\libs\openFrameworks\math\ofVec3f.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\ofApp.cpp)
+C:\Users\jason\Documents\openframeworks_v0.11.2\libs\openFrameworks\math\ofVec2f.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\ofApp.cpp)
+C:\Users\jason\Documents\openframeworks_v0.11.2\libs\openFrameworks\math\ofVec3f.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\main.cpp)
+C:\Users\jason\Documents\openframeworks_v0.11.2\libs\openFrameworks\math\ofVec2f.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\main.cpp)
+C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\src\ofApp.cpp(50,8): warning C4996: 'ofTrueTypeFont::loadFont': Use load instead
+C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\src\ofApp.cpp(130,9): warning C4101: 'pos' :참조되지 않은 지역 변수입니다.
+C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\src\ofApp.cpp(208,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\src\ofApp.cpp(190,9): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\src\ofApp.cpp(190,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\src\ofApp.cpp(347,10): warning C4477: 'printf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'std::string'입니다.
+C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\src\ofApp.cpp(374,18): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\src\ofApp.cpp(383): warning C4715: 'ofApp::readFile': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  mazeproj.vcxproj -> C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\bin\mazeproj_debug.exe
+  
+  	                   2	C:\Users\jason\Documents\openframeworks_v0.11.2\libs\fmod\lib\vs\Win32\
+  	  *추가 파일  		 6018560	C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\bin\FreeImage.dll
+  
+  	                   1	C:\Users\jason\Documents\openframeworks_v0.11.2\libs\FreeImage\lib\vs\Win32\
+  	  *추가 파일  		 1544704	C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\bin\fmod.dll
+  	  *추가 파일  		 1733120	C:\Users\jason\Desktop\Comsil1\week12\exercise\mazeproj\bin\fmodL.dll
