@@ -84,5 +84,7 @@ class ofApp : public ofBaseApp {
 		void doTopmost(bool bTop);
 
 		//Maze related variables
-		vector<string> MazeLines;
+		vector<string> MazeLines;	//stores file content line by line
+		graphNode** MazeGraph;		//points to start of adjacency list
+		void InsertToAdjList(int vertex1, int vertex2);
 };

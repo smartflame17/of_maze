@@ -273,6 +273,7 @@ void ofApp::keyPressed(int key) {
 			doFullScreen(false);
 		}
 		else {
+			freeMemory();
 			ofExit();
 		}
 	}
@@ -368,12 +369,40 @@ bool ofApp::readFile()
 			for (auto line : buffer.getLines())
 				MazeLines.push_back(line);
 
-			int i;
+			int i, j;
 			WIDTH = 0;
 			HEIGHT = MazeLines.size() / 2;
 			for (i = 0; i < MazeLines[0].size(); i++)
 				if (MazeLines[0][i] == '-') WIDTH++;
 			
+			MazeGraph = (graphNode**)malloc(sizeof(graphNode*)*WIDTH * HEIGHT);
+			for (i = 0; i < WIDTH * HEIGHT; i++) {
+				MazeGraph[i] = (graphNode*)malloc(sizeof(graphNode));
+				MazeGraph[i]->vertex = i;
+				MazeGraph[i]->link = nullptr;
+			}
+
+			//part where we read line by line of maz file
+			for (j = 0; j < HEIGHT - 1; j++) {
+				for (i = 0; i < WIDTH - 1; i++) {
+					if (MazeLines[2 * j + 1][2 * i + 2] == ' ') {	//if maze is horizontally connected
+						InsertToAdjList(i + j * HEIGHT, i + j * HEIGHT + 1);
+					}
+					if (MazeLines[2 * j + 2][2 * i + 1] == ' ') {	//if maze is vertically connected
+						InsertToAdjList(i + j * HEIGHT, i + (j+1) * HEIGHT);
+					}
+				}
+				//exception handling for last cell in row (only have to check for vertical connection)
+				if (MazeLines[2 * j + 2][2 * i + 1] == ' ') {	
+					InsertToAdjList(i + j * HEIGHT, i + (j + 1) * HEIGHT);
+				}
+			}
+			//exception handling for last row (only have to check for horizontal connection)
+			for (i = 0; i < WIDTH - 1; i++) {
+				if (MazeLines[2 * (HEIGHT - 1) + 1][2 * i + 2] == ' ') {
+					InsertToAdjList(i + (HEIGHT-1) * HEIGHT, i + (HEIGHT - 1) * HEIGHT + 1);
+				}
+			}
 		}
 		else {
 			printf("  Needs a '.maz' extension\n");
@@ -381,10 +410,46 @@ bool ofApp::readFile()
 		}
 	}
 }
+void ofApp::InsertToAdjList(int vertex1, int vertex2) {
+	graphNode* tmp;
+	graphNode* cur;
+
+	cur = MazeGraph[vertex1];
+	while (cur->link)
+		cur = cur->link;								//cur now points to last added element on list node
+	tmp = (graphNode*)malloc(sizeof(graphNode));
+	tmp->vertex = vertex2;
+	tmp->link = nullptr;
+	cur->link = tmp;									// edge vertex1 -> vertex2 added
+
+	cur = MazeGraph[vertex2];
+	while (cur->link)
+		cur = cur->link;
+	tmp = (graphNode*)malloc(sizeof(graphNode));
+	tmp->vertex = vertex1;
+	tmp->link = nullptr;
+	cur->link = tmp;									// edge vertex2 -> vertex1 added
+}
+
 void ofApp::freeMemory() {
 
 	//TO DO
 	// malloc한 memory를 free해주는 함수
+	int i;
+	graphNode* tmp;
+	graphNode* cur;
+
+	for (i = 0; i < WIDTH * HEIGHT; i++) {
+		cur = MazeGraph[i];
+		tmp = cur->link;
+		free(cur);
+		while (tmp) {
+			cur = tmp;
+			tmp = cur->link;
+			free(cur);
+		}
+	}
+	free(MazeGraph);
 }
 
 bool ofApp::DFS()//DFS탐색을 하는 함수
