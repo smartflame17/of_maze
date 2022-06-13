@@ -466,6 +466,7 @@ void ofApp::freeMemory() {
 	vector<string>().swap(MazeLines);
 	free(isVisited);
 	vector<vector<int>>().swap(drawDFS);
+	vector<vector<int>>().swap(visitDFS);
 }
 
 void ofApp::DrawMazeCell(graphNode* vertex) {
@@ -526,7 +527,8 @@ bool ofApp::DFS()//DFS탐색을 하는 함수
 		while (temp != nullptr) {				//search through all adjacent, unvisited nodes
 			if (!isVisited[temp->vertex]) {
 				isVisited[temp->vertex] = true;
-				DFSvertices.push(temp->vertex);
+				dfsallvisited(DFSvertices.top(), temp->vertex);
+				DFSvertices.push(temp->vertex); //push visited node into stack
 				visit_flag = 1;
 				break;
 			}
@@ -569,8 +571,32 @@ void ofApp::dfsdrawsetup() {
 	}
 }
 
+void ofApp::dfsallvisited(int v1, int v2) {
+	int row_v1, col_v1;
+	int row_v2, col_v2;
+	vector<int> tempv;
+
+	row_v1 = v1 % WIDTH;
+	col_v1 = v1 / WIDTH;
+	row_v2 = v2 % WIDTH;
+	col_v2 = v2 / WIDTH;		//turn vertex index to x y coord
+
+	tempv.push_back(20 + (row_v1 + 0.5) * MazeCellSize);
+	tempv.push_back(20 + (col_v1 + 0.5) * MazeCellSize);
+	tempv.push_back(20 + (row_v2 + 0.5) * MazeCellSize);
+	tempv.push_back(20 + (col_v2 + 0.5) * MazeCellSize);
+	visitDFS.push_back(tempv);
+}
+
 void ofApp::dfsdraw(){
-	for (int i = 0; i < drawDFS.size(); i++)
+	int i;
+	for (i = 0; i < visitDFS.size(); i++) {
+		ofSetColor(200);
+		ofDrawLine(visitDFS[i][0], visitDFS[i][1], visitDFS[i][2], visitDFS[i][3]);
+	}
+	for (i = 0; i < drawDFS.size(); i++) {
+		ofSetColor(ofColor::blue);
 		ofDrawLine(drawDFS[i][0], drawDFS[i][1], drawDFS[i][2], drawDFS[i][3]);
+	}	
 }
 

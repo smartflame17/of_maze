@@ -100,7 +100,9 @@ class ofApp : public ofBaseApp {
 
 		//dfs search related variables
 		bool* isVisited;
-		stack<int> DFSvertices;
-		vector<vector<int>> drawDFS;
+		stack<int> DFSvertices;			//stack used in DFS
+		vector<vector<int>> drawDFS;	//includes correct path
+		vector<vector<int>> visitDFS;	//also includes all visited paths by DFS
 		void dfsdrawsetup();		//puts content of stack into vector drawDFS
+		void dfsallvisited(int v1, int v2);		//set path info (vertex -> vertex) into vector of int vectors for drawing
 };

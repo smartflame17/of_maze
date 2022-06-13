@@ -1,24 +1,30 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 중간 디렉터리(obj\Win32\Debug\)에 다른 프로젝트(mazeproj.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  main.cpp
   ofApp.cpp
   Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
-c:\users\jason\documents\openframeworks_v0.11.2\libs\openframeworks\utils\ofutils.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-c:\users\jason\documents\openframeworks_v0.11.2\libs\openframeworks\math\ofvec3f.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-c:\users\jason\documents\openframeworks_v0.11.2\libs\openframeworks\math\ofvec2f.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-c:\users\jason\desktop\comsil1\week13\exercise\of_maze\src\ofapp.cpp(53): warning C4996: 'ofTrueTypeFont::loadFont': Use load instead
-  c:\users\jason\documents\openframeworks_v0.11.2\libs\openframeworks\graphics\oftruetypefont.h(193): note: 'ofTrueTypeFont::loadFont' 선언을 참조하십시오.
-c:\users\jason\desktop\comsil1\week13\exercise\of_maze\src\ofapp.cpp(133): warning C4101: 'pos' :참조되지 않은 지역 변수입니다.
-c:\users\jason\desktop\comsil1\week13\exercise\of_maze\src\ofapp.cpp(218): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.19041.0\ucrt\stdio.h(1764): note: 'sprintf' 선언을 참조하십시오.
-c:\users\jason\desktop\comsil1\week13\exercise\of_maze\src\ofapp.cpp(195): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
-c:\users\jason\desktop\comsil1\week13\exercise\of_maze\src\ofapp.cpp(358): warning C4477: 'printf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'std::string'입니다.
-c:\users\jason\desktop\comsil1\week13\exercise\of_maze\src\ofapp.cpp(385): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\jason\desktop\comsil1\week13\exercise\of_maze\src\ofapp.cpp(573): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\jason\desktop\comsil1\week13\exercise\of_maze\src\ofapp.cpp(424): warning C4715: 'ofApp::readFile': 모든 제어 경로에서 값을 반환하지는 않습니다.
-  of_maze.vcxproj -> C:\Users\jason\Desktop\Comsil1\week13\exercise\of_maze\bin\of_maze_debug.exe
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+c:\users\d104\desktop\of_v0.11.2_vs2017_release\libs\openframeworks\utils\ofutils.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\main.cpp)
+c:\users\d104\desktop\of_v0.11.2_vs2017_release\libs\openframeworks\utils\ofutils.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\ofApp.cpp)
+c:\users\d104\desktop\of_v0.11.2_vs2017_release\libs\openframeworks\math\ofvec3f.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\main.cpp)
+c:\users\d104\desktop\of_v0.11.2_vs2017_release\libs\openframeworks\math\ofvec3f.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\ofApp.cpp)
+c:\users\d104\desktop\of_v0.11.2_vs2017_release\libs\openframeworks\math\ofvec2f.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\main.cpp)
+c:\users\d104\desktop\of_v0.11.2_vs2017_release\libs\openframeworks\math\ofvec2f.h : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오. (소스 파일 컴파일 중 src\ofApp.cpp)
+c:\users\d104\desktop\20201572\of_maze\src\ofapp.cpp(53): warning C4996: 'ofTrueTypeFont::loadFont': Use load instead
+  c:\users\d104\desktop\of_v0.11.2_vs2017_release\libs\openframeworks\graphics\oftruetypefont.h(193): note: 'ofTrueTypeFont::loadFont' 선언을 참조하십시오.
+c:\users\d104\desktop\20201572\of_maze\src\ofapp.cpp(133): warning C4101: 'pos' :참조되지 않은 지역 변수입니다.
+c:\users\d104\desktop\20201572\of_maze\src\ofapp.cpp(218): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: 'sprintf' 선언을 참조하십시오.
+c:\users\d104\desktop\20201572\of_maze\src\ofapp.cpp(195): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+c:\users\d104\desktop\20201572\of_maze\src\ofapp.cpp(358): warning C4477: 'printf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'std::string'입니다.
+c:\users\d104\desktop\20201572\of_maze\src\ofapp.cpp(385): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\d104\desktop\20201572\of_maze\src\ofapp.cpp(593): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\d104\desktop\20201572\of_maze\src\ofapp.cpp(597): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\d104\desktop\20201572\of_maze\src\ofapp.cpp(424): warning C4715: 'ofApp::readFile': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  of_maze.vcxproj -> C:\Users\D104\Desktop\20201572\of_maze\bin\of_maze_debug.exe
   
-  	                   2	C:\Users\jason\Documents\openframeworks_v0.11.2\libs\fmod\lib\vs\Win32\
-  	  *추가 파일  		 6018560	C:\Users\jason\Desktop\Comsil1\week13\exercise\of_maze\bin\FreeImage.dll
+  	                   2	C:\Users\D104\Desktop\of_v0.11.2_vs2017_release\libs\fmod\lib\vs\Win32\
+  	  *추가 파일  		 6018560	C:\Users\D104\Desktop\20201572\of_maze\bin\FreeImage.dll
   
-  	                   1	C:\Users\jason\Documents\openframeworks_v0.11.2\libs\FreeImage\lib\vs\Win32\
-  	  *추가 파일  		 1544704	C:\Users\jason\Desktop\Comsil1\week13\exercise\of_maze\bin\fmod.dll
-  	  *추가 파일  		 1733120	C:\Users\jason\Desktop\Comsil1\week13\exercise\of_maze\bin\fmodL.dll
+  	                   1	C:\Users\D104\Desktop\of_v0.11.2_vs2017_release\libs\FreeImage\lib\vs\Win32\
+  	  *추가 파일  		 1544704	C:\Users\D104\Desktop\20201572\of_maze\bin\fmod.dll
+  	  *추가 파일  		 1733120	C:\Users\D104\Desktop\20201572\of_maze\bin\fmodL.dll
